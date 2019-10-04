@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Hãy nhập vào số của bạn:'));
+    if (kiemtra() || number == 2) {
+        alert(number + ' là số nguyên tố');
+    } else {
+        alert(number + ' không phải là số nguyên tố:');
+    }
+
+    function kiemtra() {
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+</script>
+</body>
+</html>

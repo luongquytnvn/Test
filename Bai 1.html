@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<div id="iddiv"></div>
+<script>
+    let toan = parseInt(prompt('Hãy nhập điểm Toán của bạn: '));
+    while (toan > 10 || toan < 0) {
+        toan = parseInt(prompt('Hãy nhập lại điểm Toán của bạn 0 <= điểm <= 10: '));
+    }
+    let van = parseInt(prompt('Hãy nhập điểm Văn của bạn: '));
+    while (van > 10 || toan < 0) {
+        van = parseInt(prompt('Hãy nhập lại điểm Văn của bạn 0 <= điểm <= 10: '));
+    }
+    let tienganh = parseInt(prompt('Hãy nhập điểm Tiếng anh của bạn: '));
+    while (tienganh > 10 || toan < 0) {
+        tienganh = parseInt(prompt('Hãy nhập lại điểm Tiếng anh của bạn 0 <= điểm <= 10: '));
+    }
+    let average = (toan * 2 + van + tienganh * 2) / 5;
+    if (average < 5) {
+        result = 'Không đạt';
+    } else if (average < 7.5) {
+        result = 'Đạt';
+    } else if (average < 8.5) {
+        result = 'Khá';
+    } else {
+        result = 'Tốt';
+    }
+    document.getElementById('iddiv').innerHTML = 'Điểm trung bình của bạn là: ' + average + '; Đánh giá: ' + result;
+</script>
+</body>
+</html>
